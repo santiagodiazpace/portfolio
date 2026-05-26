@@ -200,88 +200,23 @@ h3 {
 }
 
 .hero-visual {
+  align-items: center;
+  display: flex;
+  justify-content: center;
   min-height: 560px;
   position: relative;
 }
 
-.portrait {
-  align-items: center;
-  aspect-ratio: 1;
-  background:
-    linear-gradient(145deg, rgba(246, 200, 95, 0.95), rgba(255, 122, 107, 0.96)),
-    var(--panel);
-  border: 1px solid rgba(255, 255, 255, 0.28);
+.hero-photo {
+  aspect-ratio: 4 / 5;
+  border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 8px;
-  display: flex;
-  justify-content: center;
-  left: 6%;
-  position: absolute;
-  top: 8%;
-  width: min(58vw, 360px);
-}
-
-.portrait-initials {
-  color: rgba(13, 17, 23, 0.84);
-  font-size: clamp(3rem, 8vw, 6.8rem);
-  font-weight: 900;
-}
-
-.mockup-window {
-  background: rgba(21, 27, 35, 0.92);
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  bottom: 10%;
-  box-shadow: 0 34px 90px rgba(0, 0, 0, 0.36);
-  min-height: 290px;
-  padding: 18px;
-  position: absolute;
-  right: 0;
-  width: min(86vw, 430px);
-}
-
-.window-bar {
-  display: flex;
-  gap: 8px;
-}
-
-.window-bar span {
-  background: var(--muted);
-  border-radius: 999px;
-  height: 10px;
-  opacity: 0.7;
-  width: 10px;
-}
-
-.mockup-content {
-  padding-top: 38px;
-}
-
-.mockup-line {
-  background: rgba(255, 255, 255, 0.18);
-  border-radius: 999px;
-  height: 14px;
-  margin-top: 16px;
-  width: 52%;
-}
-
-.mockup-line.wide {
-  background: var(--accent);
-  height: 22px;
-  width: 78%;
-}
-
-.mockup-grid {
-  display: grid;
-  gap: 12px;
-  grid-template-columns: repeat(2, 1fr);
-  margin-top: 34px;
-}
-
-.mockup-grid span {
-  background: var(--panel-soft);
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  min-height: 74px;
+  box-shadow: 0 34px 90px rgba(0, 0, 0, 0.42);
+  display: block;
+  max-height: 620px;
+  object-fit: cover;
+  object-position: center top;
+  width: min(100%, 430px);
 }
 
 .split {
@@ -617,13 +552,8 @@ h3 {
     min-height: 380px;
   }
 
-  .portrait {
-    width: min(74vw, 280px);
-  }
-
-  .mockup-window {
-    min-height: 230px;
-    width: min(90vw, 350px);
+  .hero-photo {
+    width: min(100%, 320px);
   }
 
   .service-grid,
