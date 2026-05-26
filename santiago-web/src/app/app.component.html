@@ -13,7 +13,7 @@
     <div class="hero-copy">
       <p class="eyebrow">Portfolio online</p>
       <h1>Santiago Diaz&nbsp;Pace</h1>
-      <p class="headline">Frontend Developer &bull; UX/UI Designer &bull; Graphic Designer</p>
+      <p class="headline">Frontend Developer &bull; Visual & UX/UI Designer </p>
       <p class="intro">Desarrollo experiencias digitales modernas, funcionales y centradas en el usuario.</p>
       <div class="hero-actions">
         <a class="button primary" href="#proyectos">Ver proyectos</a>
@@ -45,13 +45,37 @@
   <section id="servicios" class="section">
     <div class="section-heading">
       <p class="eyebrow services-eyebrow">Servicios</p>
-      <h2>Que hago</h2>
+      <h2>Mi enfoque</h2>
       <p>Ordeno problemas digitales desde la estrategia visual hasta la interfaz final.</p>
     </div>
     <div class="service-grid">
       @for (service of services; track service.title) {
         <article class="service-card">
-          <h3>{{ service.title }}</h3>
+          <h3 class="service-title">
+            <span class="service-icon" aria-hidden="true">
+              @switch (service.icon) {
+                @case ('code') {
+                  <svg viewBox="0 0 24 24"><path d="M8.5 8 4.5 12l4 4M15.5 8l4 4-4 4M13 5l-2 14"/></svg>
+                }
+                @case ('layout') {
+                  <svg viewBox="0 0 24 24"><path d="M4 5h16v14H4zM4 10h16M10 10v9"/></svg>
+                }
+                @case ('pen') {
+                  <svg viewBox="0 0 24 24"><path d="M4 20l4.5-1 10-10a2.1 2.1 0 0 0-3-3l-10 10L4 20zM14.5 7.5l2 2"/></svg>
+                }
+                @case ('kanban') {
+                  <svg viewBox="0 0 24 24"><path d="M4 5h16v14H4zM8 9h3M8 13h3M14 9h2M14 13h2"/></svg>
+                }
+                @case ('spark') {
+                  <svg viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3zM18 16l.8 2.2L21 19l-2.2.8L18 22l-.8-2.2L15 19l2.2-.8L18 16z"/></svg>
+                }
+                @case ('ai') {
+                  <svg viewBox="0 0 24 24"><path d="M12 4v3M12 17v3M4 12h3M17 12h3M7.8 7.8l2.1 2.1M14.1 14.1l2.1 2.1M16.2 7.8l-2.1 2.1M9.9 14.1l-2.1 2.1M9 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0z"/></svg>
+                }
+              }
+            </span>
+            {{ service.title }}
+          </h3>
           <p>{{ service.description }}</p>
           <div class="tag-list">
             @for (item of service.items; track item) {

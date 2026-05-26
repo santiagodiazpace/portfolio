@@ -110,8 +110,8 @@ main {
 }
 
 .eyebrow {
-  color: var(--subtitle);
-  font-size: 13px;
+  color: var(--subtitle)!important;
+  font-size: 16px;
   font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -185,12 +185,14 @@ h3 {
 }
 
 .button:hover {
+  background: #FF9933;
+  color: var(--ink);
   transform: translateY(-2px);
 }
 
 .primary {
-  background: var(--accent);
-  color: #06211f;
+  background: var(--text);
+  color: var(--ink);
 }
 
 .secondary {
@@ -199,8 +201,8 @@ h3 {
 }
 
 .ghost {
-  border-color: var(--line);
-  color: var(--text);
+  background: var(--text);
+  color: var(--ink);
 }
 
 .full {
@@ -231,6 +233,11 @@ h3 {
   display: grid;
   gap: 48px;
   grid-template-columns: 0.95fr 1.05fr;
+}
+
+#sobre-mi h2,
+#experiencia h2 {
+  margin-top: 16px;
 }
 
 .text-stack {
@@ -278,6 +285,36 @@ h3 {
   padding: 28px;
 }
 
+.service-title {
+  align-items: center;
+  color: #FF9933;
+  display: flex;
+  gap: 12px;
+}
+
+.service-icon {
+  align-items: center;
+  background: rgba(142, 124, 195, 0.22);
+  border: 1px solid rgba(142, 124, 195, 0.58);
+  border-radius: 8px;
+  color: #d8cff7;
+  display: inline-flex;
+  flex: 0 0 auto;
+  height: 38px;
+  justify-content: center;
+  width: 38px;
+}
+
+.service-icon svg {
+  fill: none;
+  height: 21px;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+  width: 21px;
+}
+
 .service-card p,
 .project-body p,
 .timeline-item p {
@@ -298,10 +335,11 @@ h3 {
 
 .tag-list span,
 .tech-list span {
-  background: rgba(255, 255, 255, 0.07);
-  border: 1px solid var(--line);
+  background: rgba(142, 124, 195, 0.34);
+  border: 1px solid rgba(216, 207, 247, 0.72);
   border-radius: 8px;
-  color: var(--text);
+  color: #f1ecff;
+  box-shadow: 0 0 0 1px rgba(142, 124, 195, 0.14), 0 10px 22px rgba(100, 68, 192, 0.16);
   font-size: 0.86rem;
   font-weight: 700;
   padding: 8px 10px;
@@ -312,7 +350,7 @@ h3 {
 }
 
 .tech-list span {
-  background: var(--panel-soft);
+  background: rgba(142, 124, 195, 0.38);
   font-size: 0.94rem;
   padding: 12px 14px;
 }

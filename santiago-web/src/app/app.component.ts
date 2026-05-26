@@ -11,29 +11,40 @@ export class AppComponent {
 
   services = [
     {
+      icon: 'code',
       title: 'Desarrollo Frontend',
       description: 'Aplicaciones web modernas, responsivas y escalables con foco en performance.',
       items: ['Angular', 'TypeScript', 'Responsive Design', 'APIs', 'Performance']
     },
     {
+      icon: 'layout',
       title: 'UX/UI',
       description: 'Interfaces claras que ordenan flujos, contenido y decisiones visuales.',
       items: ['Wireframes', 'Prototipos', 'Diseño de interfaces', 'Research basico', 'Sistemas de diseño']
     },
     {
+      icon: 'pen',
       title: 'Diseño Gráfico',
       description: 'Piezas visuales consistentes para marcas, redes y comunicacion digital.',
       items: ['Branding', 'Redes sociales', 'Flyers', 'Presentaciones', 'Diseño publicitario']
     },
     {
-      title: 'Gestion de Proyectos Digitales',
+      icon: 'kanban',
+      title: 'Gestión de Proyectos Digitales',
       description: 'Organizacion, seguimiento y coordinacion de proyectos para avanzar con foco y claridad.',
       items: ['Planificación', 'Priorización', 'Backlog', 'Trabajo ágil', 'Comunicación']
     },
     {
+      icon: 'spark',
       title: 'Ilustración',
       description: 'Recursos visuales propios para reforzar identidad, narrativa y personalidad de marca.',
       items: ['Ilustración digital', 'Personajes', 'Iconografia', 'Composiciones', 'Assets visuales']
+    },
+    {
+      icon: 'ai',
+      title: 'INTELIGENCIA ARTIFICIAL',
+      description: 'Uso IA como herramienta para acelerar procesos, explorar soluciones y potenciar productos digitales.',
+      items: ['Prompts', 'Automatizacion', 'Ideacion', 'Analisis', 'Flujos con IA']
     }
   ];
 
@@ -75,7 +86,7 @@ export class AppComponent {
       company: '7ideas',
       role: 'Frontend Developer / UX/UI / PM',
       period: 'Actualidad',
-      tasks: ['Desarrollo Angular', 'Diseño UX/UI', 'Gestion de proyectos', 'Trabajo agil']
+      tasks: ['Desarrollo Angular', 'Diseño UX/UI', 'Gestión de proyectos', 'Trabajo ágil']
     },
     {
       company: 'MOI Diseño',
