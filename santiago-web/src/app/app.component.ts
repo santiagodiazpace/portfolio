@@ -20,7 +20,7 @@ export class AppComponent {
       icon: 'layout',
       title: 'UX/UI',
       description: 'Interfaces claras que ordenan flujos, contenido y decisiones visuales.',
-      items: ['Wireframes', 'Prototipos', 'Diseño de interfaces', 'Research basico', 'Sistemas de diseño']
+      items: ['Wireframes', 'Prototipos', 'Diseño de interfaces', 'Research básico', 'Sistemas de diseño']
     },
     {
       icon: 'pen',
@@ -31,8 +31,8 @@ export class AppComponent {
     {
       icon: 'kanban',
       title: 'Gestión de Proyectos Digitales',
-      description: 'Organizacion, seguimiento y coordinacion de proyectos para avanzar con foco y claridad.',
-      items: ['Planificación', 'Priorización', 'Backlog', 'Trabajo ágil', 'Comunicación']
+      description: 'Organización, seguimiento y coordinación de proyectos para avanzar con foco y claridad.',
+      items: ['Planificación', 'Priorización', 'Backlog', 'Metodologías ágiles', 'Comunicación']
     },
     {
       icon: 'spark',
@@ -43,8 +43,8 @@ export class AppComponent {
     {
       icon: 'ai',
       title: 'INTELIGENCIA ARTIFICIAL',
-      description: 'Uso IA como herramienta para acelerar procesos, explorar soluciones y potenciar productos digitales.',
-      items: ['Prompts', 'Automatizacion', 'Ideacion', 'Analisis', 'Flujos con IA']
+      description: 'Uso de IA como herramienta para acelerar procesos, explorar soluciones y potenciar productos digitales.',
+      items: ['Prompts', 'Ideación', 'Análisis', 'IA Generativa']
     }
   ];
 
