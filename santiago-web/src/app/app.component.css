@@ -91,7 +91,7 @@ main {
 }
 
 .nav a:hover {
-  color: var(--text);
+  color: #FF9933;
 }
 
 .section {
@@ -518,7 +518,7 @@ h3 {
 }
 
 .contact-section {
-  align-items: start;
+  align-items: stretch;
   display: grid;
   gap: 48px;
   grid-template-columns: 1fr 420px;
@@ -530,18 +530,45 @@ h3 {
 }
 
 .contact-card {
+  align-content: center;
   display: grid;
   gap: 12px;
   padding: 24px;
 }
 
-.contact-card > a:not(.button) {
+.contact-link {
+  align-items: center;
   background: var(--panel-soft);
   border: 1px solid var(--line);
   border-radius: 8px;
   color: var(--text);
+  display: flex;
+  gap: 12px;
   font-weight: 750;
+  min-width: 0;
   padding: 14px 16px;
+  transition: border-color 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+a.contact-link:hover {
+  border-color: rgba(255, 153, 51, 0.55);
+  color: #FF9933;
+  transform: translateY(-2px);
+}
+
+.contact-info {
+  cursor: default;
+}
+
+.contact-link img {
+  flex: 0 0 auto;
+  height: 30px;
+  width: 30px;
+}
+
+.contact-link span {
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 @media (max-width: 920px) {
