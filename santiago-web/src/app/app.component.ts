@@ -18,12 +18,22 @@ export class AppComponent {
     {
       title: 'UX/UI',
       description: 'Interfaces claras que ordenan flujos, contenido y decisiones visuales.',
-      items: ['Wireframes', 'Prototipos', 'Diseno de interfaces', 'Research basico', 'Sistemas de diseno']
+      items: ['Wireframes', 'Prototipos', 'Diseño de interfaces', 'Research basico', 'Sistemas de diseño']
     },
     {
-      title: 'Diseno Grafico',
+      title: 'Diseño Gráfico',
       description: 'Piezas visuales consistentes para marcas, redes y comunicacion digital.',
-      items: ['Branding', 'Redes sociales', 'Flyers', 'Presentaciones', 'Diseno publicitario']
+      items: ['Branding', 'Redes sociales', 'Flyers', 'Presentaciones', 'Diseño publicitario']
+    },
+    {
+      title: 'Gestion de Proyectos Digitales',
+      description: 'Organizacion, seguimiento y coordinacion de proyectos para avanzar con foco y claridad.',
+      items: ['Planificación', 'Priorización', 'Backlog', 'Trabajo ágil', 'Comunicación']
+    },
+    {
+      title: 'Ilustración',
+      description: 'Recursos visuales propios para reforzar identidad, narrativa y personalidad de marca.',
+      items: ['Ilustración digital', 'Personajes', 'Iconografia', 'Composiciones', 'Assets visuales']
     }
   ];
 
@@ -65,15 +75,15 @@ export class AppComponent {
       company: '7ideas',
       role: 'Frontend Developer / UX/UI / PM',
       period: 'Actualidad',
-      tasks: ['Desarrollo Angular', 'Diseno UX/UI', 'Gestion de proyectos', 'Trabajo agil']
+      tasks: ['Desarrollo Angular', 'Diseño UX/UI', 'Gestion de proyectos', 'Trabajo agil']
     },
     {
-      company: 'MOI Diseno',
-      role: 'Disenador grafico freelance',
+      company: 'MOI Diseño',
+      role: 'Diseñador gráfico freelance',
       period: 'Freelance',
-      tasks: ['Branding', 'Diseno digital', 'Redes sociales', 'Diseno visual']
+      tasks: ['Branding', 'Diseño digital', 'Redes sociales', 'Diseño visual']
     }
   ];
 
-  workflow = ['Entender el problema', 'Disenar la experiencia', 'Desarrollar la solucion', 'Optimizar y mejorar'];
+  workflow = ['Entender el problema', 'Diseñar la experiencia', 'Desarrollar la solución', 'Optimizar y mejorar'];
 }

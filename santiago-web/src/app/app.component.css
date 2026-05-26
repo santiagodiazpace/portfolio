@@ -7,6 +7,7 @@
   --line: rgba(255, 255, 255, 0.1);
   --accent: #4fd1c5;
   --accent-strong: #f6c85f;
+  --subtitle: #8E7CC3;
   --coral: #ff7a6b;
   --ink: #111827;
   color: var(--text);
@@ -109,14 +110,20 @@ main {
 }
 
 .eyebrow {
-  color: var(--accent);
-  font-size: 0.78rem;
+  color: var(--subtitle);
+  font-size: 13px;
   font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
+.services-eyebrow {
+  color: #8E7CC3;
+  font-size: 13px;
+}
+
 h1 {
+  color: #FF9933;
   font-size: clamp(3.2rem, 9vw, 7.2rem);
   font-weight: 850;
   line-height: 0.92;
@@ -125,6 +132,7 @@ h1 {
 }
 
 h2 {
+  color: #FF9933;
   font-size: clamp(2rem, 4.6vw, 4.2rem);
   font-weight: 800;
   line-height: 1;
@@ -136,7 +144,7 @@ h3 {
 }
 
 .headline {
-  color: var(--accent-strong);
+  color: var(--subtitle);
   font-size: clamp(1.05rem, 2vw, 1.35rem);
   font-weight: 700;
   margin-top: 24px;
@@ -249,7 +257,7 @@ h3 {
 }
 
 .service-grid {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 .service-card,
