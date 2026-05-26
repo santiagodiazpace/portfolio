@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'santiago-web' title`, () => {
+  it(`should have the portfolio title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('santiago-web');
+    expect(app.title).toEqual('Santiago Diaz Pace');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, santiago-web');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Santiago Diaz Pace');
   });
 });
