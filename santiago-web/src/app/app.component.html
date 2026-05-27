@@ -42,7 +42,7 @@
     <div class="section-heading">
       <p class="eyebrow services-eyebrow">Servicios</p>
       <h2>Mi enfoque</h2>
-      <p>Gestiono problemas digitales desde la estrategia visual hasta la interfaz final.</p>
+      <p>Gestiono soluciones digitales desde la estrategia visual hasta la interfaz final.</p>
     </div>
     <div class="service-grid">
       @for (service of services; track service.title) {
@@ -83,22 +83,10 @@
     </div>
   </section>
 
-  <section class="section tech-section">
-    <div class="section-heading compact">
-      <p class="eyebrow">Tecnologias</p>
-      <h2>Stack y herramientas</h2>
-    </div>
-    <div class="tech-list">
-      @for (technology of technologies; track technology) {
-        <span>{{ technology }}</span>
-      }
-    </div>
-  </section>
-
   <section id="proyectos" class="section">
     <div class="section-heading">
       <p class="eyebrow">Proyectos destacados</p>
-      <h2>Casos que muestran producto, interfaz y marca.</h2>
+      <h2>Casos de éxito.</h2>
     </div>
     <div class="project-grid">
       @for (project of projects; track project.name) {
@@ -145,7 +133,7 @@
     <div class="timeline">
       @for (item of experience; track item.company) {
         <article class="timeline-item">
-          <span>{{ item.period }}</span>
+          <span class="experience-years">{{ item.years }}</span>
           <h3>{{ item.company }}</h3>
           <p>{{ item.role }}</p>
           <ul>
@@ -163,13 +151,8 @@
       <p class="eyebrow">Como trabajo</p>
       <h2>Un proceso simple para avanzar con claridad.</h2>
     </div>
-    <div class="workflow-grid">
-      @for (step of workflow; track step; let index = $index) {
-        <article>
-          <span>0{{ index + 1 }}</span>
-          <h3>{{ step }}</h3>
-        </article>
-      }
+    <div class="workflow-visual">
+      <img src="/assets/proceso.svg" alt="Proceso de trabajo">
     </div>
   </section>
 

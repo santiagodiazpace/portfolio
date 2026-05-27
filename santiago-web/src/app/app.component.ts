@@ -42,20 +42,18 @@ export class AppComponent {
     },
     {
       icon: 'ai',
-      title: 'INTELIGENCIA ARTIFICIAL',
+      title: 'Inteligencia Artificial',
       description: 'Uso de IA como herramienta para acelerar procesos, explorar soluciones y potenciar productos digitales.',
       items: ['Prompts', 'Ideación', 'Análisis', 'IA Generativa']
     }
   ];
 
-  technologies = ['Angular', 'TypeScript', 'HTML5', 'CSS3', 'JavaScript', 'Figma', 'Illustrator', 'Photoshop', 'Git', 'APIs REST', 'IA aplicada', 'Responsive UI'];
-
   projects = [
     {
       name: 'Teamwork',
       type: 'App colaborativa',
-      description: 'Gestion de equipos, tareas y seguimiento visual para mejorar la coordinacion diaria.',
-      problem: 'Ordenar informacion dispersa y hacer mas claro el avance de cada proyecto.',
+      description: 'Gestión de equipos, tareas y seguimiento visual para mejorar la coordinación diaria.',
+      problem: 'Ordenar información dispersa y hacer más claro el avance de cada proyecto.',
       tech: ['Angular', 'TypeScript', 'UX/UI']
     },
     {
@@ -68,7 +66,7 @@ export class AppComponent {
     {
       name: 'Landing Pages',
       type: 'Web comercial',
-      description: 'Paginas rapidas, visuales y enfocadas en conversion para servicios y productos digitales.',
+      description: 'Páginas rápidas, visuales y enfocadas en conversión para servicios y productos digitales.',
       problem: 'Presentar ofertas de forma clara, confiable y optimizada para mobile.',
       tech: ['HTML', 'CSS', 'Responsive']
     },
@@ -76,25 +74,24 @@ export class AppComponent {
       name: 'Branding Digital',
       type: 'Identidad visual',
       description: 'Sistemas visuales para marcas con piezas adaptadas a redes, presentaciones y web.',
-      problem: 'Dar coherencia visual a la comunicacion en distintos canales.',
+      problem: 'Dar coherencia visual a la comunicación en distintos canales.',
       tech: ['Figma', 'Illustrator', 'Photoshop']
     }
   ];
 
   experience = [
     {
-      company: '7ideas',
+      company: 'Sieteideas',
       role: 'Frontend Developer / UX/UI / PM',
-      period: 'Actualidad',
+      years: '+5 años',
       tasks: ['Desarrollo Angular', 'Diseño UX/UI', 'Gestión de proyectos', 'Trabajo ágil']
     },
     {
       company: 'MOI Diseño',
-      role: 'Diseñador gráfico freelance',
-      period: 'Freelance',
+      role: 'Founder / Visual Designer',
+      years: '+15 años',
       tasks: ['Branding', 'Diseño digital', 'Redes sociales', 'Diseño visual']
     }
   ];
 
-  workflow = ['Entender el problema', 'Diseñar la experiencia', 'Desarrollar la solución', 'Optimizar y mejorar'];
 }

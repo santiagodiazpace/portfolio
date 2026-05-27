@@ -244,8 +244,7 @@ h3 {
 }
 
 .service-grid,
-.project-grid,
-.workflow-grid {
+.project-grid {
   display: grid;
   gap: 18px;
 }
@@ -257,7 +256,6 @@ h3 {
 .service-card,
 .project-card,
 .timeline-item,
-.workflow-grid article,
 .contact-card {
   background: var(--panel);
   border: 1px solid var(--line);
@@ -309,8 +307,7 @@ h3 {
   line-height: 1.65;
 }
 
-.tag-list,
-.tech-list {
+.tag-list {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
@@ -320,8 +317,7 @@ h3 {
   margin-top: auto;
 }
 
-.tag-list span,
-.tech-list span {
+.tag-list span {
   background: rgba(142, 124, 195, 0.34);
   border: 1px solid rgba(216, 207, 247, 0.72);
   border-radius: 8px;
@@ -330,16 +326,6 @@ h3 {
   font-size: 0.86rem;
   font-weight: 700;
   padding: 8px 10px;
-}
-
-.tech-section {
-  padding-top: 32px;
-}
-
-.tech-list span {
-  background: rgba(142, 124, 195, 0.38);
-  font-size: 0.94rem;
-  padding: 12px 14px;
 }
 
 .project-grid {
@@ -479,12 +465,20 @@ h3 {
   width: 12px;
 }
 
-.timeline-item > span {
-  color: var(--accent-strong);
-  display: inline-block;
-  font-size: 0.82rem;
-  font-weight: 800;
-  margin-bottom: 10px;
+.experience-years {
+  color: var(--subtitle);
+  font-size: 1.9rem;
+  font-weight: 900;
+  line-height: 1;
+  position: absolute;
+  right: 24px;
+  top: 24px;
+}
+
+.timeline-item h3,
+.timeline-item p,
+.timeline-item ul {
+  padding-right: 132px;
 }
 
 .timeline-item ul {
@@ -495,20 +489,14 @@ h3 {
   padding-left: 18px;
 }
 
-.workflow-grid {
-  grid-template-columns: repeat(4, 1fr);
+.workflow-visual {
+  margin-top: 48px;
 }
 
-.workflow-grid article {
-  min-height: 160px;
-  padding: 22px;
-}
-
-.workflow-grid span {
-  color: var(--accent);
-  display: inline-block;
-  font-weight: 900;
-  margin-bottom: 34px;
+.workflow-visual img {
+  display: block;
+  height: auto;
+  width: 100%;
 }
 
 .contact-section {
@@ -582,8 +570,7 @@ a.contact-link:hover {
   }
 
   .service-grid,
-  .project-grid,
-  .workflow-grid {
+  .project-grid {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -624,8 +611,7 @@ a.contact-link:hover {
   }
 
   .service-grid,
-  .project-grid,
-  .workflow-grid {
+  .project-grid {
     grid-template-columns: 1fr;
   }
 
