@@ -55,7 +55,7 @@ export class AppComponent {
       image: '/assets/appwork.png',
       description: 'Gestión de equipos, tareas y seguimiento para mejorar la coordinación diaria. Desarrollo frontend.',
       problem: 'Desarrollar app y ordenar información dispersa y hacer más claro el avance de cada proyecto.',
-      tech: ['Angular', 'TypeScript', 'UX/UI']
+      tech: ['Angular', 'HTML', 'CSS','TypeScript', 'UX/UI']
     },
     {
       name: 'InvoiceAI',
@@ -63,7 +63,7 @@ export class AppComponent {
       image: '/assets/invoiceai.png',
       description: 'Flujo para analizar facturas, automatizar lectura de datos y acelerar tareas administrativas.',
       problem: 'Reducir carga manual en procesos repetitivos y mejorar la velocidad de respuesta.',
-      tech: ['Angular', 'IA', 'APIs']
+      tech: ['Angular', 'HTML', 'CSS','IA', 'APIs']
     },
     {
       name: 'Landing Page',
@@ -71,7 +71,7 @@ export class AppComponent {
       image: '/assets/sieteideas.png',
       description: 'Páginas rápidas, visuales y enfocadas en conversión para servicios y productos digitales.',
       problem: 'Presentar ofertas de forma clara, confiable y optimizada para mobile.',
-      tech: ['HTML', 'CSS', 'Responsive']
+      tech: ['HTML', 'CSS', 'Responsive', 'Angular']
     },
     {
       name: 'Branding Digital',
