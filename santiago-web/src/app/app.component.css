@@ -339,11 +339,19 @@ h3 {
 .project-image {
   align-items: end;
   aspect-ratio: 16 / 10;
-  background:
-    linear-gradient(135deg, rgba(79, 209, 197, 0.96), rgba(246, 200, 95, 0.82)),
-    var(--panel-soft);
+  background: var(--panel-soft);
   display: flex;
+  overflow: hidden;
   padding: 20px;
+  position: relative;
+}
+
+.project-image img {
+  height: 100%;
+  inset: 0;
+  object-fit: cover;
+  position: absolute;
+  width: 100%;
 }
 
 .project-image span {
@@ -353,6 +361,8 @@ h3 {
   font-size: 0.82rem;
   font-weight: 800;
   padding: 8px 10px;
+  position: relative;
+  z-index: 1;
 }
 
 .project-body {
@@ -363,17 +373,6 @@ h3 {
 
 .problem strong {
   color: var(--text);
-}
-
-.project-links {
-  display: flex;
-  gap: 16px;
-  margin-top: 4px;
-}
-
-.project-links a {
-  color: var(--accent);
-  font-weight: 800;
 }
 
 .illustration-section {

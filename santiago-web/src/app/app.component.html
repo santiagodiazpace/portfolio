@@ -92,6 +92,7 @@
       @for (project of projects; track project.name) {
         <article class="project-card">
           <div class="project-image">
+            <img [src]="project.image" [alt]="project.name">
             <span>{{ project.type }}</span>
           </div>
           <div class="project-body">
@@ -103,9 +104,6 @@
                 <span>{{ technology }}</span>
               }
             </div>
-            <div class="project-links">
-              <a href="#contacto">Demo</a>
-            </div>
           </div>
         </article>
       }
@@ -114,7 +112,7 @@
 
   <section class="section illustration-section">
     <div class="illustration-copy">
-      <p class="eyebrow">Ilustracion</p>
+      <p class="eyebrow">Ilustración</p>
       <h2>Visuales propios para cada experiencia.</h2>
       <p>
         Desarrollo recursos gráficos, composiciones y sistemas visuales que acompañan productos digitales, campañas y presentaciones.

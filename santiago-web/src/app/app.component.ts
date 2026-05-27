@@ -50,22 +50,25 @@ export class AppComponent {
 
   projects = [
     {
-      name: 'Teamwork',
+      name: 'AppWork',
       type: 'App colaborativa',
-      description: 'Gestión de equipos, tareas y seguimiento visual para mejorar la coordinación diaria.',
-      problem: 'Ordenar información dispersa y hacer más claro el avance de cada proyecto.',
+      image: '/assets/appwork.png',
+      description: 'Gestión de equipos, tareas y seguimiento para mejorar la coordinación diaria. Desarrollo frontend.',
+      problem: 'Desarrollar app y ordenar información dispersa y hacer más claro el avance de cada proyecto.',
       tech: ['Angular', 'TypeScript', 'UX/UI']
     },
     {
       name: 'InvoiceAI',
       type: 'Producto con IA',
+      image: '/assets/invoiceai.png',
       description: 'Flujo para analizar facturas, automatizar lectura de datos y acelerar tareas administrativas.',
       problem: 'Reducir carga manual en procesos repetitivos y mejorar la velocidad de respuesta.',
       tech: ['Angular', 'IA', 'APIs']
     },
     {
-      name: 'Landing Pages',
+      name: 'Landing Page',
       type: 'Web comercial',
+      image: '/assets/sieteideas.png',
       description: 'Páginas rápidas, visuales y enfocadas en conversión para servicios y productos digitales.',
       problem: 'Presentar ofertas de forma clara, confiable y optimizada para mobile.',
       tech: ['HTML', 'CSS', 'Responsive']
@@ -73,8 +76,9 @@ export class AppComponent {
     {
       name: 'Branding Digital',
       type: 'Identidad visual',
+      image: '/assets/nido.png',
       description: 'Sistemas visuales para marcas con piezas adaptadas a redes, presentaciones y web.',
-      problem: 'Dar coherencia visual a la comunicación en distintos canales.',
+      problem: 'Desarrollo de identidad visual y comunicación en distintos canales.',
       tech: ['Figma', 'Illustrator', 'Photoshop']
     }
   ];
