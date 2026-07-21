@@ -16,7 +16,7 @@
       <p class="intro">Desarrollo experiencias digitales modernas, funcionales y centradas en el usuario.</p>
       <div class="hero-actions">
         <a class="button primary" href="#proyectos">Ver proyectos</a>
-        <a class="button secondary" href="/assets/cv-santiago-diaz-pace.pdf" target="_blank" rel="noopener">Descargar CV</a>
+        <a class="button secondary" href="assets/cv-santiago-diaz-pace.pdf" target="_blank" rel="noopener">Descargar CV</a>
         <a class="button ghost" href="#contacto">Contacto</a>
       </div>
     </div>
@@ -104,11 +104,60 @@
                 <span>{{ technology }}</span>
               }
             </div>
+            @if (project.name === 'Branding Digital') {
+              <button
+                class="work-carousel-trigger"
+                type="button"
+                aria-label="Ver todos los trabajos de branding"
+                (click)="openWorkCarousel()">
+                <span aria-hidden="true">+</span>
+              </button>
+            }
           </div>
         </article>
       }
     </div>
   </section>
+
+  @if (isWorkCarouselOpen) {
+    <div class="work-carousel-backdrop" role="presentation" (click)="closeWorkCarousel()">
+      <section
+        class="work-carousel"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Galería de trabajos de branding"
+        (click)="$event.stopPropagation()">
+        <div class="work-carousel-header">
+          <div>
+            <p class="eyebrow">Branding digital</p>
+            <h2>Trabajos seleccionados</h2>
+          </div>
+          <button class="carousel-close" type="button" aria-label="Cerrar galería" (click)="closeWorkCarousel()">&times;</button>
+        </div>
+
+        <div class="carousel-stage">
+          <button class="carousel-arrow previous" type="button" aria-label="Imagen anterior" (click)="showPreviousWork()">&#8249;</button>
+          <img [src]="workImages[currentWorkIndex]" [alt]="'Trabajo de branding ' + (currentWorkIndex + 1)">
+          <button class="carousel-arrow next" type="button" aria-label="Imagen siguiente" (click)="showNextWork()">&#8250;</button>
+        </div>
+
+        <p class="carousel-counter" aria-live="polite">{{ currentWorkIndex + 1 }} / {{ workImages.length }}</p>
+
+        <div class="carousel-thumbnails" aria-label="Seleccionar imagen">
+          @for (image of workImages; track image; let index = $index) {
+            <button
+              type="button"
+              [class.active]="index === currentWorkIndex"
+              [attr.aria-label]="'Ver imagen ' + (index + 1)"
+              [attr.aria-current]="index === currentWorkIndex ? 'true' : null"
+              (click)="selectWork(index)">
+              <img [src]="image" alt="">
+            </button>
+          }
+        </div>
+      </section>
+    </div>
+  }
 
   <section class="section illustration-section">
     <div class="illustration-copy">
@@ -119,7 +168,7 @@
       </p>
     </div>
     <div class="illustration-board">
-      <img src="/assets/ilustracion.png" alt="Ilustracion de diseno digital">
+      <img src="assets/ilustracion.png" alt="Ilustracion de diseno digital">
     </div>
   </section>
 
@@ -150,7 +199,7 @@
       <h2>Un proceso simple para avanzar con claridad.</h2>
     </div>
     <div class="workflow-visual">
-      <img src="/assets/proceso.svg" alt="Proceso de trabajo">
+      <img src="assets/proceso.svg" alt="Proceso de trabajo">
     </div>
   </section>
 
@@ -162,15 +211,15 @@
     </div>
     <div class="contact-card">
       <div class="contact-link contact-info">
-        <img src="/assets/email.svg" alt="" aria-hidden="true">
+        <img src="assets/email.svg" alt="" aria-hidden="true">
         <span>sdiazpace&#64;gmail.com</span>
       </div>
       <a class="contact-link" href="https://www.linkedin.com/in/santiago-diaz-pace" target="_blank" rel="noopener" aria-label="Abrir LinkedIn de Santiago Diaz Pace">
-        <img src="/assets/linkedin.svg" alt="" aria-hidden="true">
+        <img src="assets/linkedin.svg" alt="" aria-hidden="true">
         <span>linkedin.com/in/santiago-diaz-pace</span>
       </a>
       <a class="contact-link" href="https://wa.me/5492494001904" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp a Santiago Diaz Pace">
-        <img src="/assets/whatsapp.svg" alt="" aria-hidden="true">
+        <img src="assets/whatsapp.svg" alt="" aria-hidden="true">
         <span>+54 9 2494 001904</span>
       </a>
     </div>

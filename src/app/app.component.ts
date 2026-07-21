@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +8,62 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Santiago Diaz Pace';
+
+  workImages = [
+    'apicola.png',
+    'baez.png',
+    'cardiologia.png',
+    'constructora.png',
+    'estudiocontable.png',
+    'etchecoin.png',
+    'goimendi.png',
+    'heki.png',
+    'krama.png',
+    'lamarita.png',
+    'liniers.png',
+    'majoporta.png',
+    'moi.png',
+    'nido.png',
+    'ricardo.png',
+    'rufus.png',
+    'selab.png',
+    'trinodes.png'
+  ].map((image) => `assets/works/${image}`);
+
+  isWorkCarouselOpen = false;
+  currentWorkIndex = 0;
+
+  openWorkCarousel(): void {
+    this.currentWorkIndex = 0;
+    this.isWorkCarouselOpen = true;
+    document.body.style.overflow = 'hidden';
+  }
+
+  closeWorkCarousel(): void {
+    this.isWorkCarouselOpen = false;
+    document.body.style.overflow = '';
+  }
+
+  showPreviousWork(): void {
+    this.currentWorkIndex = (this.currentWorkIndex - 1 + this.workImages.length) % this.workImages.length;
+  }
+
+  showNextWork(): void {
+    this.currentWorkIndex = (this.currentWorkIndex + 1) % this.workImages.length;
+  }
+
+  selectWork(index: number): void {
+    this.currentWorkIndex = index;
+  }
+
+  @HostListener('document:keydown', ['$event'])
+  handleCarouselKeyboard(event: KeyboardEvent): void {
+    if (!this.isWorkCarouselOpen) return;
+
+    if (event.key === 'Escape') this.closeWorkCarousel();
+    if (event.key === 'ArrowLeft') this.showPreviousWork();
+    if (event.key === 'ArrowRight') this.showNextWork();
+  }
 
   services = [
     {
@@ -52,7 +108,7 @@ export class AppComponent {
     {
       name: 'AppWork',
       type: 'App colaborativa',
-      image: '/assets/appwork.png',
+      image: 'assets/appwork.png',
       description: 'Gestión de equipos, tareas y seguimiento para mejorar la coordinación diaria. Desarrollo frontend.',
       problem: 'Desarrollar app y ordenar información dispersa y hacer más claro el avance de cada proyecto.',
       tech: ['Angular', 'HTML', 'CSS','TypeScript', 'UX/UI']
@@ -60,7 +116,7 @@ export class AppComponent {
     {
       name: 'InvoiceAI',
       type: 'Producto con IA',
-      image: '/assets/invoiceai.png',
+      image: 'assets/invoiceai.png',
       description: 'Flujo para analizar facturas, automatizar lectura de datos y acelerar tareas administrativas.',
       problem: 'Reducir carga manual en procesos repetitivos y mejorar la velocidad de respuesta.',
       tech: ['Angular', 'HTML', 'CSS','IA', 'APIs']
@@ -68,15 +124,15 @@ export class AppComponent {
     {
       name: 'Landing Page',
       type: 'Web comercial',
-      image: '/assets/sieteideas.png',
+      image: 'assets/sieteideas.png',
       description: 'Páginas rápidas, visuales y enfocadas en conversión para servicios y productos digitales.',
-      problem: 'Presentar ofertas de forma clara, confiable y optimizada para mobile.',
+      problem: 'Visualización y presencia de la empresa en la web.',
       tech: ['HTML', 'CSS', 'Responsive', 'Angular']
     },
     {
       name: 'Branding Digital',
       type: 'Identidad visual',
-      image: '/assets/nido.png',
+      image: 'assets/nido.png',
       description: 'Sistemas visuales para marcas con piezas adaptadas a redes, presentaciones y web.',
       problem: 'Desarrollo de identidad visual y comunicación en distintos canales.',
       tech: ['Figma', 'Illustrator', 'Photoshop']
